@@ -1,0 +1,97 @@
+// Conversion2.0.cpp : Defines the entry point for the console application.
+// 
+
+#include "stdafx.h"
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(int argc, char** argv)
+{
+
+	// This is a program that converts between celsius, kelvin and fahrenheit
+	string input;
+	double number;
+	const double convertor1 = 180;
+	const double convertor2 = 273.15;
+	
+
+
+	cout << "What do you want to convert? Type K, C, or F";
+	cin >> input;
+
+
+	if (input == "K") {
+		double kelvin = 0;
+		double fahrenheit = 0;
+		double celsius = 0;
+		cout << "Type the value of the unit you want to convert?";
+		cin >> number;
+		number = kelvin;
+
+		// start conversion from kelvin to celsius
+		celsius = kelvin - convertor2;
+
+		// start conversion form celsius to fahrenheit
+		fahrenheit = convertor1 * celsius / 100 + 32;
+
+		// print out the values
+		cout << "The value you typed for kelvin is:";
+		cout << kelvin << endl;
+		cout << "The degrees in fahrenheit is:";
+		cout << fahrenheit << endl;
+		cout << "The degrees in celsius is:";
+		cout << celsius << endl;
+
+	}
+	else if (input == "C") {
+		double kelvin = 0;
+		double fahrenheit = 0;
+		double celsius = 0;
+		number = celsius;
+
+		// start conversion from celsius to kelvin 
+		kelvin = celsius + convertor2;
+
+		// start conversion from celsius to fahrenheit
+		fahrenheit = convertor1 * celsius / 100 + 32;
+
+		// print out the values
+		cout << "The value you typed for celsius is:";
+		cout << celsius << endl;
+		cout << "The degrees in fahrenheit is:";
+		cout << fahrenheit << endl;
+		cout << "The degrees in kelvin is:";
+		cout << kelvin << endl;
+	}
+
+	else if (input == "F") {
+		double kelvin = 0;
+		double fahrenheit = 0;
+		double celsius = 0;
+		number = fahrenheit;
+
+		// start conversion from fahrenheit to celsius
+		celsius = (fahrenheit - 32) * 100 / convertor1;
+
+		// start conversion from celsius to kelvin
+		kelvin = celsius + convertor2;
+
+		// print out the values
+		cout << "The value you typed for fahrenheit is:";
+		cout << fahrenheit << endl;
+		cout << "The degrees in celsius is:";
+		cout << celsius << endl;
+		cout << "The degrees in kelvin is:";
+		cout << kelvin << endl;
+
+	}
+
+
+	system("PAUSE");
+    return 0;
+}
+
